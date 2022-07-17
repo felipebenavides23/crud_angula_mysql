@@ -1,0 +1,79 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-lg-6 col-ms-12 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <form>
+            <div class="mb-3">
+              <label for="titulo" class="form-label">Titulo</label>
+              <input
+                type="text"
+                class="form-control"
+                id="titulo"
+                placeholder="Titulo"
+                name="titulo"
+                [(ngModel)]="gamesform.titulo"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="descripcion" class="form-label">Descripcion</label>
+              <textarea
+                name="desccripcion"
+                class="form-control"
+                id="descripcion"
+                cols="70"
+                rows="4"
+                placeholder="Descripcion"
+                [(ngModel)]="gamesform.descripcion"
+              ></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="urlImagen" class="form-label">Imagen</label>
+              <input
+                type="url"
+                class="form-control"
+                id="urlImagen"
+                placeholder="Imagen"
+                name="imagen"
+                [(ngModel)]="gamesform.imagen"
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              (click)="crearJuego()"
+            >
+              Guardar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-5 col-ms-12">
+      <div class="card col-sm-12">
+        <div class="card-header titulo">
+          <i class="bi bi-award-fill"></i> {{ gamesform.titulo }}
+        </div>
+        <img src="{{ gamesform.imagen }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <p class="card-text">
+            <i class="bi bi-calendar"></i>
+            {{ gamesform.fechacreacion | date: "yyyy-mm-dd" }}
+          </p>
+          <p class="card-text">
+            {{ gamesform.descripcion }}
+          </p>
+
+          <button type="button" class="btn btn-primary me-3">
+            <i><i class="bi bi-pencil-square"></i> Editar</i>
+          </button>
+          <button type="button" class="btn btn-danger">
+            <i> <i class="bi bi-trash"></i> Eliminar</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

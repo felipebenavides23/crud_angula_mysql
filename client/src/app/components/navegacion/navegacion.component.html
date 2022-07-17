@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/"
+      ><i class="bi bi-controller"></i> Games</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"> </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item me-2">
+          <a
+            class="nav-link menus"
+            aria-current="page"
+            routerLink="/listaGames"
+            routerLinkActive="active activemenus"
+            ><i class="bi bi-joystick"></i> lista de juegos</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link menus"
+            routerLink="formulariogame"
+            routerLinkActive="active activemenus"
+            ><i class="bi bi-folder-plus"></i> agregar juegos</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

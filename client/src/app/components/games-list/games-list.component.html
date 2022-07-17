@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-lg-4 col-md-6 mb-3" *ngFor="let game of gamesentrada">
+      <div class="card col-sm-12">
+        <div class="card-header titulo">
+          <i class="bi bi-award-fill"></i> {{ game.title }}
+        </div>
+        <img src="{{ game.image }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <p class="card-text">
+            <i class="bi bi-calendar"></i>
+            {{ game.create_game | date: "yyyy-mm-dd" }}
+          </p>
+          <p class="card-text">
+            {{ game.descripcion }}
+          </p>
+
+          <button type="button" class="btn btn-primary me-3">
+            <i><i class="bi bi-pencil-square"></i> Editar</i>
+          </button>
+          <button type="button" class="btn btn-danger">
+            <i (click)="eliminarJuego(game.id)">
+              <i class="bi bi-trash"></i> Eliminar</i
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

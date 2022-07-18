@@ -67,7 +67,9 @@ class GmaesControl {
       [titulo, descripcion, imagen, id],
       (err) => {
         if (!err) {
-          res.send("actualiza con exito");
+          res.json({
+            mensaje: "se edito con exito",
+          });
         } else {
           res.send("error al atualizar");
         }

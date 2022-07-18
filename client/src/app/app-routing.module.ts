@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: '', component: GamesListComponent },
   { path: 'listaGames', component: GamesListComponent },
   { path: 'formulariogame', component: FormGamesComponent },
+  { path: 'edit/:id', component: FormGamesComponent },
 ];
 
 @NgModule({

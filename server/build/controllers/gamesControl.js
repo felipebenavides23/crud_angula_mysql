@@ -74,7 +74,9 @@ class GmaesControl {
         const { id } = req.params;
         datadabe_1.default.query("UPDATE game SET title= ?, descripcion = ?, image = ? WHERE id = ?", [titulo, descripcion, imagen, id], (err) => {
             if (!err) {
-                res.send("actualiza con exito");
+                res.json({
+                    mensaje: "se edito con exito",
+                });
             }
             else {
                 res.send("error al atualizar");
